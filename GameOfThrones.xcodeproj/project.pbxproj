@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		1209353D25AB15C0009E1870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209353C25AB15C0009E1870 /* ContentView.swift */; };
 		1209353F25AB15C6009E1870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1209353E25AB15C6009E1870 /* Assets.xcassets */; };
 		1209354225AB15C6009E1870 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1209354125AB15C6009E1870 /* Preview Assets.xcassets */; };
+		1209354B25AB15ED009E1870 /* Chracter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209354A25AB15ED009E1870 /* Chracter.swift */; };
+		1209354E25AB1713009E1870 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1209354D25AB1713009E1870 /* NetworkService.swift */; };
+		1209355225AB1EA3009E1870 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1209355125AB1EA3009E1870 /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		1209353E25AB15C6009E1870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1209354125AB15C6009E1870 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1209354325AB15C6009E1870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1209354A25AB15ED009E1870 /* Chracter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chracter.swift; sourceTree = "<group>"; };
+		1209354D25AB1713009E1870 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1209355225AB1EA3009E1870 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				1209353A25AB15C0009E1870 /* GameOfThronesApp.swift */,
 				1209353C25AB15C0009E1870 /* ContentView.swift */,
+				1209354D25AB1713009E1870 /* NetworkService.swift */,
+				1209354A25AB15ED009E1870 /* Chracter.swift */,
 				1209353E25AB15C6009E1870 /* Assets.xcassets */,
 				1209354325AB15C6009E1870 /* Info.plist */,
 				1209354025AB15C6009E1870 /* Preview Content */,
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = GameOfThrones;
+			packageProductDependencies = (
+				1209355125AB1EA3009E1870 /* URLImage */,
+			);
 			productName = GameOfThrones;
 			productReference = 1209353725AB15C0009E1870 /* GameOfThrones.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 1209352E25AB15C0009E1870;
+			packageReferences = (
+				1209355025AB1EA3009E1870 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 1209353825AB15C0009E1870 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +154,8 @@
 			files = (
 				1209353D25AB15C0009E1870 /* ContentView.swift in Sources */,
 				1209353B25AB15C0009E1870 /* GameOfThronesApp.swift in Sources */,
+				1209354E25AB1713009E1870 /* NetworkService.swift in Sources */,
+				1209354B25AB15ED009E1870 /* Chracter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1209355025AB1EA3009E1870 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1209355125AB1EA3009E1870 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1209355025AB1EA3009E1870 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1209352F25AB15C0009E1870 /* Project object */;
 }
